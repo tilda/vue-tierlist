@@ -53,11 +53,12 @@
         color: var(--vue-tierlist-textcolor);
         display: flex;
         align-items: center;
-        margin-right: 10px;
+        margin-right: 5px;
+        padding-right: 5px;
+        border-right: var(--vue-tierlist-border);
     }
     .v-tierlist-tier-items {
         display: flex;
-        justify-content: space-around;
         flex-direction: row;
     }
 </style>
