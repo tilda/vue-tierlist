@@ -1,8 +1,11 @@
 # vue-tierlist
 
-A tiermaker-esque customizable component plugin for Vue.js 2.
+A Tiermaker-esque component plugin for Vue.js 2. By default, the component is basically a 1:1 replica of Tiermaker's implementation - however there are customization options available if you so choose.
 
-*Note: Vue 3 support is planned, but not a priority since I am still actively using Vue 2.*
+# Planned
+- **Vue 3 support** (note: I am still using Vue 2 for the most part so may take a while to switch over)
+- Description support (being able to elaborate on your choices, this is where it differs from Tiermaker really)
+- *???* (Have other requests? I'll likely be happy to add them here for later work.)
 
 # Installation
 
@@ -31,6 +34,7 @@ If you'd like to customize how your tier list looks, there are plenty of options
 :root {
     --vue-tierlist-background: #1a1a17;     /* Type: color         */
     --vue-tierlist-border: solid 1px black; /* Type: border [1]    */
+    --vue-tierlist-textcolor: #eee;         /* Type: color         */
     /* [1] https://developer.mozilla.org/en-US/docs/Web/CSS/border */
 }
 ```
@@ -45,8 +49,18 @@ List of tiers that should be displayed.
 
 ### `colors`
 Colors that should be used on the list of tiers above.
-- Type: `Array`
-- Default: `['#ff7f7f', '#ffbf7f', '#ffdf7f', '#ffff7f', '#bfff7f', '#7fff7f']`
+- Type: `Object`
+- Default:
+```js
+{
+    'S': '#ff7f7f',
+    'A': '#ffbf7f',
+    'B': '#ffdf7f',
+    'C': '#ffff7f',
+    'D': '#bfff7f',
+    'F': '#7fff7f'
+}
+```
 
 ### `list`
 Actual list that is used for the tier-listing.
