@@ -2,8 +2,13 @@
     <tier-list :list="list"/>
 </template>
 
-<script>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+</style>
 
+<script>
 export default {
     data: function() {
         return {
