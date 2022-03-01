@@ -6,7 +6,8 @@
             </div>
             <div class="v-tierlist-tier-items">
                 <div class="v-tierlist-tier-item" v-for="(entry) in list[tier]" :key="entry">
-                    <span>{{ entry }}</span>
+                    <span v-if="listType === 'text'">{{ entry }}</span>
+                    <img height="80" width="80" :src="entry" v-else-if="listType === 'image'"/>
                 </div>
             </div>
         </div>
@@ -97,6 +98,12 @@ export default {
                     'D': [''],
                     'F': ['']
                 }
+            }
+        },
+        listType: {
+            type: String,
+            default: function() {
+                return 'text'
             }
         }
     }

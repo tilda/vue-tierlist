@@ -78,6 +78,13 @@ Actual list that is used for the tier-listing.
 ```
 - Notes: Each tier would be its own array. For example if you had your tiers as `['epic', 'rare', 'uncommon']` your list prop would look like `{'epic': [''], 'rare': [''], 'uncommon': ['']}`.
 
+### `listType`
+Type of list that you would like to use.
+- Type: `String`
+- Default: `text`
+- Possible inputs: `image` or `text`
+- Notes: Currently you can only have one list type, not both.
+  - i.e. If you set this to `image`, it expects items to be links to images, and if you set it to `text` it will display that image link as just raw text.
 # License & other stuff
 `vue-tierlist` is licensed under the Apache 2.0 License.
 
