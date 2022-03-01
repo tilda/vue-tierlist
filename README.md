@@ -20,7 +20,7 @@ Vue.use(TierList) // it's that easy!
 ```html
     <template>
         <!-- See Content subheading below for actual usage -->
-        <tier-list :tiers="[]" :list="{['S': 'this plugin']}"/>
+        <tier-list :list="{['S': 'this plugin']}"/>
     </template>
 ```
 
