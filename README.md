@@ -1,27 +1,25 @@
 # vue-tierlist
 
-A Tiermaker-esque component plugin for Vue.js 2. By default, the component is basically a 1:1 replica of Tiermaker's implementation - however there are customization options available if you so choose.
+A Tiermaker-esque component plugin for Svelte. By default, the component is basically a 1:1 replica of Tiermaker's implementation - however there are customization options available if you so choose. I know the repo is called "vue-tierlist", it's just because I made it when I was unenlightened and I don't know where the rename button is. Please [email me](mailto:tilda@crouton.net) if you have any leads.
 
 # Planned
-- **Vue 3 support** (note: I am still using Vue 2 for the most part so may take a while to switch over)
 - Description support (being able to elaborate on your choices, this is where it differs from Tiermaker really)
 - *???* (Have other requests? I'll likely be happy to add them here for later work.)
 
+# Not planned
+- Vue support
+
 # Installation
 
-Install `vue-tierlist` from npm *(note: pending submission)*. Once installed you can import & use it like any other Vue plugin.
+Install `vue-tierlist` from npm *(note: pending submission)*. Once installed you can import & use it like any other Svelte plugin. Sorry again about the name.
 
 ```js
-import TierList from 'vue-tierlist'
-
-Vue.use(TierList) // it's that easy!
+import TierList from 'vue-tierlist' // it's that easy!
 ```
 
-```html
-    <template>
-        <!-- See Content subheading below for actual usage -->
-        <tier-list :list="{['S': 'this plugin']}"/>
-    </template>
+```svelte
+    <!-- See Content subheading below for actual usage -->
+    <TierList list={}/>
 ```
 
 # Customization
@@ -44,12 +42,12 @@ If you'd like to customize how your tier list looks, there are plenty of options
 
 ### `tiers`
 List of tiers that should be displayed.
-- Type: `Array`
+- Type: `string[]`
 - Default: `['S', 'A', 'B', 'C', 'D', 'F']`
 
 ### `colors`
 Colors that should be used on the list of tiers above.
-- Type: `Object`
+- Type: `{ [tier: string]: string }`
 - Default:
 ```js
 {
@@ -64,28 +62,28 @@ Colors that should be used on the list of tiers above.
 
 ### `list`
 Actual list that is used for the tier-listing.
-- Type: `Array`s surrounded by an `Object`
+- Type: `{ [tier: string]: string[] }`
 - Default: 
 ```js
-    {
-        'S': [''],
-        'A': [''],
-        'B': [''],
-        'C': [''],
-        'D': [''],
-        'F': ['']
-    }
+{
+    'S': [''],
+    'A': [''],
+    'B': [''],
+    'C': [''],
+    'D': [''],
+    'F': ['']
+}
 ```
 - Notes: Each tier would be its own array. For example if you had your tiers as `['epic', 'rare', 'uncommon']` your list prop would look like `{'epic': [''], 'rare': [''], 'uncommon': ['']}`.
 
 ### `listType`
 Type of list that you would like to use.
-- Type: `String`
-- Default: `text`
-- Possible inputs: `image` or `text`
+- Type: `'text' | 'image' | 'dick chungy'`
+- Default: `'text'`
 - Notes: Currently you can only have one list type, not both.
-  - i.e. If you set this to `image`, it expects items to be links to images, and if you set it to `text` it will display that image link as just raw text.
+  - i.e. If you set this to `'image'`, it expects items to be links to images, and if you set it to `'text'` it will display that image link as just raw text.
+
 # License & other stuff
 `vue-tierlist` is licensed under the Apache 2.0 License.
 
-If you have any questions, comments, or concerns, please feel free to reach out to me! Trust me, I won't judge for any stupid questions ~~because I am stupid too~~.
+If you have any questions, comments, or concerns, please feel free to reach out to me! Trust me, I won't judge for any stupid questions 'cause I'm based as hell.

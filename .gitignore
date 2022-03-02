@@ -1,7 +1,5 @@
-# File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
-
-# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,vuejs
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,vuejs
+# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode
 
 ### VisualStudioCode ###
 .vscode/*
@@ -23,14 +21,6 @@
 .ionide
 
 # Support for Project snippet scope
-
-### Vuejs ###
-# Recommended template: Node.gitignore
-
-node_modules/
-dist/
-npm-debug.log
-yarn-error.log
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -58,7 +48,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,vuejs
+# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
 
-# Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
-
+.DS_Store
+node_modules
+/dist/

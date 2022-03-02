@@ -1,17 +1,20 @@
 {
   "name": "vue-tierlist",
-  "version": "1.0.0",
-  "description": "Tiermaker-like utility component for Vue.js",
-  "main": "src/plugin.js",
+  "version": "2.0.0",
+  "description": "Tiermaker-like utility component for Svelte",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tilda/vue-tierlist.git"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "vuejs",
+    "svelte",
     "tier",
     "list",
     "tiermaker"
@@ -22,7 +25,10 @@
     "url": "https://github.com/tilda/vue-tierlist/issues"
   },
   "homepage": "https://github.com/tilda/vue-tierlist#readme",
-  "dependencies": {
-    "vue": "^2.6.14"
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "rollup": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "svelte": "^3.5.0"
   }
 }
