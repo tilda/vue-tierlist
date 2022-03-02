@@ -71,6 +71,8 @@ import { xlink_attr } from "svelte/internal";
         border-bottom: var(--vue-tierlist-border);
     }
     .tier-holder {
+        /* this is bugged but i think bugs are pretty cute so i will keep it around */
+        /* i wonder what happened to that spider i saw in my sink a couple of months ago */
         width: 100px;
         min-height: 80px;
         border-right: var(--vue-tierlist-border);

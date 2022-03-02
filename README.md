@@ -78,7 +78,7 @@ Actual list that is used for the tier-listing.
 
 ### `listType`
 Type of list that you would like to use.
-- Type: `'text' | 'image' | 'dick chungy'`
+- Type: `'text' | 'image' | 'dick cheney'`
 - Default: `'text'`
 - Notes: Currently you can only have one list type, not both.
   - i.e. If you set this to `'image'`, it expects items to be links to images, and if you set it to `'text'` it will display that image link as just raw text.
